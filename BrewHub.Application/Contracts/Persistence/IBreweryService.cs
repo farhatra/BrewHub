@@ -18,22 +18,6 @@ namespace BrewHub.Application.Contracts.Persistence
         Task<BeerDto> AddNewBeerAsync(int breweryId, BeerDto newBeerDto);
         Task DeleteBeerAsync(int beerId);
     }
-    public interface IWholesalerService
-    {
-        //void AddSaleToWholesaler(int wholesalerId, int beerId, int quantity);
-        //void UpdateRemainingQuantity(int wholesalerId, int beerId, int newQuantity);
-        //Quote RequestQuote(int wholesalerId, QuoteRequest request);
-
-        Task AddSaleToWholesalerAsync(int wholesalerId, int beerId, int quantity);
-        Task UpdateRemainingQuantityAsync(int wholesalerId, int beerId, int newQuantity);
-        Task<QuoteDto> RequestQuoteAsync(int wholesalerId, QuoteRequestDto requestDto);
-    }
-    public interface IQuoteService
-    {
-        //Quote GenerateQuote(int wholesalerId, QuoteRequest request);
-        Task<QuoteDto> GenerateQuoteAsync(int wholesalerId, QuoteRequestDto requestDto);
-
-    }
     //public class QuoteRequest
     //{
     //    public string ClientId { get; set; }

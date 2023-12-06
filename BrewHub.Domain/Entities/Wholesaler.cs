@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BrewHub.Domain.Entities
+﻿namespace BrewHub.Domain.Entities
 {
-    public class Brewery
+    public class Wholesaler
     {
-        public int BreweryId { get; set; }
+        public int WholesalerId { get; set; }
         public string Name { get; set; }
-        public string Location { get; set; }
+        public int Stock { get; set; }
 
-        public ICollection<Beer> Beers { get; set; }
+        public ICollection<WholesalerBeer> WholesalerBeers { get; set; }
+        public ICollection<Quote> Quotes { get; set; }
     }
 
     //public class QuoteRequest

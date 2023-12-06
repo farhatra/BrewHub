@@ -1,5 +1,6 @@
 ﻿using BrewHub.Application.Features.Commands;
 using BrewHub.Application.Features.DtoModels;
+using BrewHub.Application.Features.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
