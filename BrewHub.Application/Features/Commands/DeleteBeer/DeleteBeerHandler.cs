@@ -1,4 +1,6 @@
 ﻿using BrewHub.Application.Contracts.Persistence;
+using BrewHub.Application.Features.Commands.DeleteBeer;
+using FluentValidation;
 using MediatR;
 
 namespace BrewHub.Application.Features.Commands
@@ -14,6 +16,9 @@ namespace BrewHub.Application.Features.Commands
 
         public async Task<Unit> Handle(DeleteBeerCommand request, CancellationToken cancellationToken)
         {
+            // Validate the request
+            new DeleteBeerCommandValidator().ValidateAndThrow(request);
+
             await _breweryService.DeleteBeerAsync(request.BeerId);
             return Unit.Value;
         }
